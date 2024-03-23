@@ -285,7 +285,7 @@ fun NavDrawer() {
         ) {
                 NavHost(navController = navigationController, startDestination = Screens.Home.screen){
                     composable(Screens.Home.screen){
-                        Home()
+                        Home(navigationController)
                     }
                     composable(Screens.Profile.screen){
                         Profile()
@@ -301,6 +301,12 @@ fun NavDrawer() {
                     }
                     composable(Screens.Post.screen){
                         Post()
+                    }
+                    composable(Screens.Detail.screen){
+                        Detail(navigationController)
+                    }
+                    composable(Screens.History.screen){
+                        History(navigationController)
                     }
                 }
         }

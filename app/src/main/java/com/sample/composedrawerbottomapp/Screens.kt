@@ -8,4 +8,8 @@ sealed class Screens (val screen : String)
     data object Settings : Screens("settings")
     data object Post : Screens("post")
     data object Search : Screens("search")
+
+    data object Detail : Screens("detail")
+
+    data object History : Screens("history")
 }

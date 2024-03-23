@@ -1,6 +1,5 @@
 package com.sample.composedrawerbottomapp
 
-import android.content.Context
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -16,13 +15,13 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
-fun Home(navigationController: NavHostController) {
+fun Detail(navigationController : NavHostController){
 
     Box(){
         Column(modifier = Modifier
-            .fillMaxSize().clickable { navigationController.navigate(Screens.Detail.screen) }
+            .fillMaxSize().clickable { navigationController.navigate(Screens.History.screen) }
             .align(Alignment.Center), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(text = "Home", fontSize = 14.sp, color = Color.Black)
+            Text(text = "Detail", fontSize = 14.sp, color = Color.Black)
         }
     }
 }
@@ -30,6 +29,6 @@ fun Home(navigationController: NavHostController) {
 /*
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun PreviewHome(){
-    Home()
+fun PreviewDetail(){
+    Detail()
 }*/
